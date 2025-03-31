@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<title>Блог</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="css/style.min.css">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!--	 <style>body{opacity: 0;}</style>-->
+	<style>
+		/* Начальное состояние */
+		body {
+			opacity: 0;
+			transition: opacity 0.5s ease-in-out;
+		}
+
+		/* Класс, добавляемый после загрузки */
+		html.loaded body {
+			opacity: 1;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header wow animate__fadeInDown" data-scroll="220">
+			<div class="header__container">
+				<div class="header__left">
+					<a href="/" class="header__logo logo"><img src="img/logo.svg" alt="Logo"></a>
+					<a class="header__tel" href="tel:+7 (916) 033-24-04">+7 (916) 033-24-04</a>
+					<div class="header__menu menu">
+						<nav class="menu__body">
+							<ul class="menu__list">
+								<li class="menu__item has-submenu" data-spoilers="991.98">
+									<a href="#" class="menu__link _icon-dropdown" data-spoiler>Продукты</a>
+									<ul class="submenu">
+										<li><a href="">Инвестиции в&nbsp;складскую недвижимость</a></li>
+										<li><a href="">Стратегии прибыльных вложений в&nbsp;коммерческую недвижимость</a></li>
+									</ul>
+								</li>
+								<li class="menu__item"><a href="#" class="menu__link">О нас</a></li>
+								<li class="menu__item"><a href="#" class="menu__link">Партнёры</a></li>
+								<li class="menu__item"><a href="#" class="menu__link">Блог</a></li>
+								<li class="menu__item"><a href="#" class="menu__link">Контакты</a></li>
+							</ul>
+							<div class="menu__body-mobile">
+							</div>
+						</nav>
+					</div>
+				</div>
+				<div class="header__right">
+					<div class="header__social social" data-da=".menu__body-mobile, 991.98,last">
+						<a href="" class="social__item">
+							<svg>
+								<use xlink:href="img/icons/icons.svg#tg"></use>
+							</svg>
+						</a>
+						<a href="" class="social__item">
+							<svg>
+								<use xlink:href="img/icons/icons.svg#wp"></use>
+							</svg>
+						</a>
+					</div>
+					<button class="header__btn button button_outline" data-popup="#call" data-da=".menu__body-mobile, 991.98,last" type="button">Оставить заявку
+					</button>
+					<button type="button" class="menu__icon icon-menu"><span></span></button>
+				</div>
+				<div class="header__submenu">
+					<div class="solution-inner">
+						<div class="solution-inner__item item-solution wow animate__fadeInUp">
+							<div class="item-solution__top">
+								<div class="item-solution__title title title_h3">Инвестиции в&nbsp;складскую <br>
+									недвижимость
+								</div>
+								<div class="item-solution__text">Это надёжный способ вложения, который обеспечивает
+									<span>стабильный доход до&nbsp;45%.</span> Высокий спрос на&nbsp;складские помещения
+									даёт гарантии
+									востребованности и&nbsp;перспективу роста данного рынка. Работая с&nbsp;проверенными
+									застройщиками, мы подбираем лучшие объекты для&nbsp;надёжности и&nbsp;прибыльности ваших
+									вложений.
+								</div>
+							</div>
+							<a href="" class="item-solution__link streched-link _icon-arrow"></a>
+							<img src="img/solution/01.webp" alt="Image" class="item-solution__img">
+						</div>
+						<div class="solution-inner__item item-solution wow animate__fadeInUp">
+							<div class="item-solution__top">
+								<div class="item-solution__title title title_h3">Вложения в&nbsp;ИТ-технологии <br> для
+									управления
+									недвижимостью
+								</div>
+								<div class="item-solution__text">
+									Мы видим большой потенциал в&nbsp;цифровизации процесса аренды недвижимости. Новые
+									технологии
+									трансформируют рынок сдачи внаём, упрощая процессы и&nbsp;создавая новые возможности
+									для получения дохода. Вложения в&nbsp;эту сферу позволяют диверсифицировать ваш портфель
+									и&nbsp;сделать стратегически важный шаг к&nbsp;росту доходности вложений в&nbsp;самой
+									трендовой
+									отрасли.
+								</div>
+							</div>
+							<a href="" class="item-solution__link streched-link _icon-arrow"></a>
+							<img src="img/solution/02.webp" alt="Image" class="item-solution__img">
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<main class="page">
+			<nav class="breadcrumbs wow animate__fadeInUp">
+				<div class="breadcrumbs__container">
+					<ul class="breadcrumbs__list">
+						<li class="breadcrumbs__item"><a href="" class="breadcrumbs__link">Главная</a></li>
+						<li class="breadcrumbs__item"><a href="" class="breadcrumbs__link">Блог</a></li>
+						<li class="breadcrumbs__item"><span class="breadcrumbs__current">Вложения в&nbsp;коммерческую недвижимость: доходность и&nbsp;выбор объектов
+							</span></li>
+					</ul>
+				</div>
+			</nav>
+			<section class="hero hero_inner hero_one section-bottom">
+				<svg class="hero__dec" viewBox="0 0 3508 3508" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+					<g filter="url(#filter0_f_176_30)">
+						<circle cx="1754" cy="1754" r="453" fill="#6666CC" />
+					</g>
+
+					<defs>
+						<filter id="filter0_f_176_30" x="0.512085" y="0.512085" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+							<feGaussianBlur in="SourceGraphic" stdDeviation="1" />
+							<feFlood flood-opacity="0" result="BackgroundImageFix" />
+							<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+							<feGaussianBlur stdDeviation="550" />
+						</filter>
+					</defs>
+				</svg>
+				<div class="hero__container">
+					<h1 class="info-hero__title wow animate__fadeInUp">Вложения в&nbsp;коммерческую недвижимость: доходность
+						и&nbsp;выбор объектов</h1>
+					<div class="blog-single">
+						<div class="blog-single__item">
+							<div class="blog-single__img">
+								<img src="img/blog/01.webp" alt="Image" class="ibg">
+							</div>
+							<div class="blog-single__content">
+								<div class="text-main">В последние годы вложения в недвижимость становятся все более
+									популярными среди инвесторов. Этот рынок предлагает множество возможностей для получения
+									дохода и защиты капитала. В условиях нестабильной экономической ситуации и инфляции
+									такие инвестиции выглядят особенно привлекательно. Интересен тот факт, что вектор
+									внимания владельцев капитала сместился с жилых объектов на сектор коммерческой
+									недвижимости. Давайте вместе разберемся — почему
+								</div>
+							</div>
+						</div>
+						<div class="blog-single__item">
+							<div class="blog-single__content">
+								<h2 class="blog-single__item__title title title_h2">Причины популярности коммерческой
+									недвижимости</h2>
+								<div class="text-main">
+									<p>
+										Почему же инвесторы все активнее рассматривают коммерческие объекты? Это обусловлено
+										несколькими явными преимуществами:
+									</p>
+									<ul class="blog-single-list _no-bullets">
+										<li><strong>Хеджирование инфляции</strong>. Недвижимость — надежный актив, цена
+											которого, как правило,
+											неуклонно растет. Спрос на недвижимость во времена инфляции увеличивается, так
+											как
+											это
+											ограниченный ресурс;
+										</li>
+										<li><strong>Выгодность.</strong> Арендная плата за торговые залы, офисы и складские
+											комплексы выше, в
+											сравнении с рентой за жилую недвижимость. Зачастую статусность и удобные условия
+											работы
+											— неотъемлемые составляющие успешного бизнеса и за коммерческие помещения готовы
+											платить
+											больше;
+										</li>
+										<li><strong>Постоянный cash-flow.</strong> Коммерческие предприятия стремятся к
+											долговременному партнерству.
+											Не в пример жилым помещениям, где арендаторы меняются довольно часто, договоры с
+											организациями оформляются на срок от 3 лет и более. Это дает основу инвестору
+											легко
+											прогнозировать доходы и сроки их получения.
+										</li>
+										<li><strong>Льготное налогообложение.</strong> Государственные программы поддержки
+											способствуют развитию
+											инвестиций в нежилую недвижимость через механизм налоговых послаблений.
+											Возможность
+											оптимизации налогообложения делает такие вложения более привлекательными.
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="blog-single__item">
+							<div class="blog-single__img">
+								<img src="img/blog/04.webp" alt="Image" class="ibg">
+							</div>
+							<div class="blog-single__content">
+								<h2 class="blog-single__item__title title title_h2">Обзор видов коммерческой недвижимости
+									для долгосрочных вложений</h2>
+								<div class="text-main">
+									<div class="text-main__item">
+										Какие типы и назначение объектов будут наиболее выгодны и востребованы? В какие,
+										наоборот, вкладывать неоправданно и рискованно? Чтобы ответить на эти вопросы, нужно
+										внимательно мониторить рынок коммерческой недвижимости, анализировать соотношение
+										рисков и возможной доходности. Прикинем перспективы заработка на примере самых
+										популярных видов коммерческой недвижимости.
+									</div>
+									<div class="text-main__item">
+										<strong>Апарт-отели и гостиницы:</strong>
+										<ul class="blog-single-list">
+											<li>Плюсы: индустрия туризма выходит из постпандемийной стагнации, уровень
+												напряженности и опасений населения упал, наблюдается рост туристического
+												потока. В популярных для посещений местах или городах с развитой
+												инфраструктурой, вложения в гостиничный бизнес могут приносить значительные
+												доходы.
+											</li>
+											<li>Прибыльность: 8–20 % в год.</li>
+											<li>Риски: сезонный характер, высокая корреляция с активностью отдыхающих,
+												конкуренция с сетевыми участниками гостиничного рынка.
+											</li>
+										</ul>
+									</div>
+									<div class="text-main__item">
+										<strong>Офисные центры:</strong>
+										<ul class="blog-single-list">
+											<li>Плюсы: индустрия туризма выходит из постпандемийной стагнации, уровень
+												напряженности и опасений населения упал, наблюдается рост туристического
+												потока. В популярных для посещений местах или городах с развитой
+												инфраструктурой, вложения в гостиничный бизнес могут приносить значительные
+												доходы.
+											</li>
+											<li>Прибыльность: 8–20 % в год.</li>
+											<li>Риски: сезонный характер, высокая корреляция с активностью отдыхающих,
+												конкуренция с сетевыми участниками гостиничного рынка.
+											</li>
+										</ul>
+									</div>
+									<div class="text-main__item">
+										<strong>Торговые площади:</strong>
+										<ul class="blog-single-list">
+											<li>Плюсы: индустрия туризма выходит из постпандемийной стагнации, уровень
+												напряженности и опасений населения упал, наблюдается рост туристического
+												потока. В популярных для посещений местах или городах с развитой
+												инфраструктурой, вложения в гостиничный бизнес могут приносить значительные
+												доходы.
+											</li>
+											<li>Прибыльность: 8–20 % в год.</li>
+											<li>Риски: сезонный характер, высокая корреляция с активностью отдыхающих,
+												конкуренция с сетевыми участниками гостиничного рынка.
+											</li>
+										</ul>
+									</div>
+									<div class="text-main__item">
+										<strong>Складские помещения:</strong>
+										<ul class="blog-single-list">
+											<li>Плюсы: индустрия туризма выходит из постпандемийной стагнации, уровень
+												напряженности и опасений населения упал, наблюдается рост туристического
+												потока. В популярных для посещений местах или городах с развитой
+												инфраструктурой, вложения в гостиничный бизнес могут приносить значительные
+												доходы.
+											</li>
+											<li>Прибыльность: 8–20 % в год.</li>
+											<li>Риски: сезонный характер, высокая корреляция с активностью отдыхающих,
+												конкуренция с сетевыми участниками гостиничного рынка.
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="blog-single__item">
+							<div class="blog-single__content">
+								<h2 class="blog-single__item__title title title_h2">Оптимальные способы вложений в&nbsp;коммерческие
+									объекты</h2>
+								<div class="text-main">
+									<div class="text-main__item">
+										На рынке инвестиций присутствуют уже опробованные и хорошо зарекомендовавшие себя
+										варианты участия, и их выбор зависит от ваших целей и возможностей. Разберем
+										особенности, плюсы и минусы основных стратегий.
+									</div>
+									<div class="text-main__item">
+										<strong class="title title_h3">Приобретение</strong>
+										<ul class="blog-single-benefits">
+											<li><strong>Основной смысл: </strong>инвестор заключает сделку по покупке
+												актива, и, становясь
+												владельцем помещения, получает все выгоды от него: арендные платежи или
+												маржу от перепродажи по более лакомой цене.
+											</li>
+											<li><strong>Плюсы:</strong> полный контроль над активом, отсутствие
+												посреднических комиссий, вероятная прибыльность.
+											</li>
+											<li><strong>Минусы:</strong> высокие стартовые затраты и риски управления.</li>
+										</ul>
+									</div>
+									<div class="text-main__item">
+										<strong class="title title_h3">Фонды REIT (Real Estate Investment Trust)</strong>
+										<ul class="blog-single-benefits">
+											<li><strong>Основной смысл: </strong>инвестиционный фонд аккумулирует средства
+												инвесторов и направляет в строительство или покупку актива. Участие
+												вкладчика заключается в приобретении долей фонда.
+											</li>
+											<li><strong>Плюсы:</strong> Хеджирование рисков в связи с разнообразием активов,
+												профессиональное управление, минимальный порог входа, хорошая ликвидность
+												долей фонда.
+											</li>
+											<li><strong>Минусы:</strong> низкий контроль вкладчика над активами,
+												прибыльность зависит от профессионализма специалистов фонда, необходимость
+												платить комиссионное вознаграждение.
+											</li>
+										</ul>
+									</div>
+									<div class="text-main__item">
+										<strong class="title title_h3">Закрытые паевые инвестиционные фонды</strong>
+										<ul class="blog-single-benefits">
+											<li><strong>Основной смысл: </strong> это коллективные вложения инвесторов в паи
+												фонда, который финансирует определенные объекты. Активы для инвестирования
+												выбирает управляющая компания.
+
+											</li>
+											<li><strong>Плюсы:</strong> доступность информации о структуре инвестиций,
+												повышенная рентабельность вложений, поскольку объекты тщательно отобраны,
+												профессиональное управление, доступность для многих инвесторов.
+											</li>
+											<li><strong>Минусы:</strong> снижена ликвидность паев относительно REIT, если
+												фонд не торгуется на бирже.
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="blog-single__img">
+								<img src="img/blog/05.webp" alt="Image" class="ibg">
+							</div>
+						</div>
+						<div class="blog-single__item">
+							<div class="blog-single__content">
+								<h2 class="blog-single__item__title title title_h2">Инвестиции в складскую недвижимость с
+									Ziyard — ваш осознанный выбор</h2>
+								<strong class="title_h3 title">Получите выгоду от высокой доходности, защиту ваших вложений
+									и экспертный подход</strong>
+								<div class="text-main">
+									<p>
+										Мы работаем в сфере инвестиций более 6 лет. Профильное направление работы —
+										финансирование перспективных проектов надежных застройщиков и ИТ-технологий в сфере
+										недвижимости.
+									</p>
+									<p>
+										Наш опыт позволяет точно определять тенденции на рынке и выстраивать грамотные
+										концепции. Команда Ziyard состоит из высококлассных экспертов с опытом работы в
+										финансовой сфере не менее 10 лет и сертификатами ФСФР 1.0 и 5.0. Мы также уделяем
+										большое внимание автоматизации аналитических процессов, нивелируя ошибки при ручном
+										разборе. Для каждого клиента выполняется расчет риск-менеджмента и
+										money-менеджмента.
+									</p>
+									<p>
+										В условиях дефицита надежных инвестиционных инструментов, мы видим потенциал в
+										инвестициях в реальные активы. Это складские площади — коммерческая недвижимость с
+										минимальными рисками и гарантированным спросом.
+									</p>
+									<p>
+										Инвестируя с нами на 12 месяцев и более, в среднем под 40% годовых, вы получаете
+										возможность легко прогнозировать сумму дивидендов. Выплаты осуществляются раз в
+										полгода или год, что обеспечивает стабильный денежный поток.
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="blog-single__item">
+							<div class="blog-single__content">
+								<h2 class="blog-single__item__title title title_h2">Почему это выгодно </h2>
+								<div class="text-main">
+									<p>Рынок онлайн-торговли продолжает расти, а предложения на рынке складской недвижимости
+										остается ограниченным. Высокая ключевая ставка также подталкивает инвесторов искать
+										надежные активы. В чем же преимущества именно складских инвестиций:
+									</p>
+									<p>
+										<strong>Высокая доходность складов. </strong>Ценообразование на готовые объекты
+										обеспечивает минимум 35%-ный прирост на единицу вложений для наших инвесторов.
+									</p>
+									<p>
+										<strong>Ликвидность проектов.</strong> Складские помещения строятся под конкретного
+										заказчика, что минимизирует риск невостребованности и гарантирует надежность ваших
+										вложений.
+									</p>
+									<p>
+										<strong>Минимизация порогов входа.</strong> С нами у вас есть возможность вкладывать
+										в недвижимость и участвовать в крупном бизнесе даже с небольшим капиталом.
+									</p>
+									<p>
+										<strong>Низкие риски участия.</strong> Ваши вложения работают в реальном сегменте
+										инвестиций,
+										нивелируя волатильность, присущую рынкам ценных бумаг.
+									</p>
+									<p><strong>Рынок онлайн-торговли продолжает расти, а предложения на рынке складской
+											недвижимости остается ограниченным. Высокая ключевая ставка также подталкивает
+											инвесторов искать надежные активы. В чем же преимущества именно складских
+											инвестиций:
+										</strong></p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="posts-block section-bottom">
+				<div class="posts-block__container">
+					<h2 class="posts-block__title title title_h2">Читайте так же</h2>
+					<div class="posts-block__items">
+						<div class="posts-item">
+							<div class="posts-item__img">
+								<img src="img/blog/01.webp" alt="Image" class="ibg">
+							</div>
+							<div class="posts-item__body">
+								<div class="posts-item__title">Вложения в&nbsp;коммерческую недвижимость: доходность и&nbsp;выбор
+									объектов
+								</div>
+								<div class="posts-item__text">В последние годы вложения в&nbsp;недвижимость становятся все
+									более популярными среди инвесторов.
+								</div>
+								<a href="" class="posts-item__link">
+									Подробнее
+								</a>
+							</div>
+						</div>
+						<div class="posts-item">
+							<div class="posts-item__img">
+								<img src="img/blog/02.webp" alt="Image" class="ibg">
+							</div>
+							<div class="posts-item__body">
+								<div class="posts-item__title">Вложения в&nbsp;коммерческую недвижимость: доходность и&nbsp;выбор
+									объектов
+								</div>
+								<div class="posts-item__text">В последние годы вложения в&nbsp;недвижимость становятся все
+									более популярными среди инвесторов.
+								</div>
+								<a href="" class="posts-item__link">
+									Подробнее
+								</a>
+							</div>
+						</div>
+						<div class="posts-item">
+							<div class="posts-item__img">
+								<img src="img/blog/03.webp" alt="Image" class="ibg">
+							</div>
+							<div class="posts-item__body">
+								<div class="posts-item__title">Вложения в&nbsp;коммерческую недвижимость: доходность и&nbsp;выбор
+									объектов
+								</div>
+								<div class="posts-item__text">В последние годы вложения в&nbsp;недвижимость становятся все
+									более популярными среди инвесторов.
+								</div>
+								<a href="" class="posts-item__link">
+									Подробнее
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="posts-block__action">
+						<a href="" class="posts-block__btn button button_icon button_outline _icon-arrow">Все статьи</a>
+					</div>
+				</div>
+			</section>
+			<section class="feedback">
+				<img src="img/feedback-blur.svg" alt="Image" class="feedback__blur">
+				<div class="feedback__container">
+					<div class="feedback__block wow animate__fadeInUp">
+						<h2 class="feedback__title title title_h2">Мы рады вашему <i>интересу к Ziyard!</i></h2>
+						<div class="feedback__text text-xl">Оставьте данные, и&nbsp;наш менеджер свяжется с&nbsp;вами в&nbsp;течение
+							24&nbsp;часов, чтобы ответить на&nbsp;вопросы и&nbsp;предложить лучшие инвестиционные решения.
+						</div>
+					</div>
+					<div class="feedback__form form">
+						<form action="">
+							<div class="form__inner">
+								<div class="form__row wow animate__fadeInUp">
+									<label for="name" class="form__label title title_h3">Имя</label>
+									<div class="form__input">
+										<input id="name" type="text" placeholder="" class="input">
+									</div>
+								</div>
+								<div class="form__row wow animate__fadeInUp">
+									<label for="phone" class="form__label title title_h3">Телефон</label>
+									<div class="form__input">
+										<input type="text" id="phone" placeholder="+7 (999) 999-99-99" class="input js-tel">
+									</div>
+
+								</div>
+								<div class="form__row wow animate__fadeInUp">
+									<div class="checkbox">
+										<input id="c_" data-error="Ошибка" checked class="checkbox__input" type="checkbox" value="1" name="form[]">
+										<label for="c_" class="checkbox__label">
+											<span class="checkbox__text color-txt">Я согласен(на) с <a href="">Политикой конфиденциальности</a> и&nbsp;даю согласие на&nbsp;обработку персональных данных</span>
+										</label>
+									</div>
+								</div>
+								<div class="form__row wow animate__fadeInUp">
+									<button class="form__button button button_icon _icon-arrow" data-popup="#call" type="submit">Заказать
+										обратный
+										звонок
+									</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</section>
+
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+				<div class="footer__info">
+					<a href="/" class="footer__logo logo"><img src="img/logo.svg" alt="Logo"></a>
+
+					<ul class="footer__text text-main">
+						<li> © ООО ЗИЯРД 2025</li>
+						<li>ИНН: 9703180508</li>
+					</ul>
+					<div class="footer__social social">
+						<a href="" class="social__item">
+							<svg>
+								<use xlink:href="img/icons/icons.svg#tg"></use>
+							</svg>
+						</a>
+						<a href="" class="social__item">
+							<svg>
+								<use xlink:href="img/icons/icons.svg#wp"></use>
+							</svg>
+						</a>
+					</div>
+					<ul class="footer__text text-main">
+						<li>
+							<a class="link" href="tel:+79160332404">+7 (916) 033-24-04</a>
+						</li>
+						<li>
+							<a class="link" href="mailto:info@ziyard.ru">info@ziyard.ru</a>
+						</li>
+						<li>
+							г.&nbsp;Москва, 1-ая&nbsp;Тверская-Ямская 21, БЦ 4&nbsp;Ветра
+						</li>
+						<li>
+							Время работы: пн-пт 10:00-19:00
+						</li>
+					</ul>
+				</div>
+				<div class="footer__menu menu-footer">
+					<div class="menu-footer__col">
+						<div class="menu-footer__title text-main">Инвесторам</div>
+						<ul>
+							<li><a class="link" href="">О нас</a></li>
+							<li><a class="link" href="">Калькулятор</a></li>
+							<li><a class="link" href="">Партнеры</a></li>
+						</ul>
+					</div>
+					<div class="menu-footer__col">
+						<div class="menu-footer__title text-main">Продукты</div>
+						<ul>
+							<li><a class="link" href="">Складская недвижимость</a></li>
+							<li><a class="link" href=""> ИТ-технологии </a></li>
+						</ul>
+					</div>
+					<div class="menu-footer__col">
+						<div class="menu-footer__title text-main">Полезная информация</div>
+						<ul>
+							<li><a class="link" href="">Блог</a></li>
+							<li><a class="link" href="">Контакты</a></li>
+							<li><a class="link" href="">Политика конфиденциальности</a></li>
+							<li><a class="link" href="https://whitepattern.ru/" rel="nofollow" target="_blank">
+									Разработка сайта - White Pattern</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+	</div>
+	<button class="widget" type="button" data-goto-header data-goto=".calc" da>
+		<svg>
+			<use xlink:href="img/icons/icons.svg#calc"></use>
+		</svg>
+	</button>
+
+	<button class="btn-up" type="button" data-goto=".wrapper">
+		<svg>
+			<use xlink:href="img/icons/icons.svg#ar-up"></use>
+		</svg>
+	</button>
+
+	<div id="call" aria-hidden="true" class="popup">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<img src="img/popup-blur.svg" alt="Image" class="popup__blur">
+				<button data-close type="button" class="popup__close">
+					<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M15 16.75L8.875 22.875C8.64583 23.1042 8.35417 23.2188 8 23.2188C7.64583 23.2188 7.35417 23.1042 7.125 22.875C6.89583 22.6458 6.78125 22.3542 6.78125 22C6.78125 21.6458 6.89583 21.3542 7.125 21.125L13.25 15L7.125 8.875C6.89583 8.64583 6.78125 8.35417 6.78125 8C6.78125 7.64583 6.89583 7.35417 7.125 7.125C7.35417 6.89583 7.64583 6.78125 8 6.78125C8.35417 6.78125 8.64583 6.89583 8.875 7.125L15 13.25L21.125 7.125C21.3542 6.89583 21.6458 6.78125 22 6.78125C22.3542 6.78125 22.6458 6.89583 22.875 7.125C23.1042 7.35417 23.2188 7.64583 23.2188 8C23.2188 8.35417 23.1042 8.64583 22.875 8.875L16.75 15L22.875 21.125C23.1042 21.3542 23.2188 21.6458 23.2188 22C23.2188 22.3542 23.1042 22.6458 22.875 22.875C22.6458 23.1042 22.3542 23.2188 22 23.2188C21.6458 23.2188 21.3542 23.1042 21.125 22.875L15 16.75Z" fill="#F5F5F5" />
+					</svg>
+				</button>
+				<div class="popup__text">
+					<div class="popup-inner">
+						<div class="popup-inner__title title title_h2">Оцените потенциал <i>роста вашего капитала!</i></div>
+						<div class="popup-inner__text title title_h4">
+							Зарабатывайте до <span>45%</span> в&nbsp;год
+						</div>
+						<div class="popup-inner__form form">
+							<form action="">
+								<div class="form__inner">
+									<div class="form__row ">
+										<label for="name" class="form__label title title_h3">Имя</label>
+										<div class="form__input">
+											<input id="name" type="text" placeholder="" class="input">
+										</div>
+									</div>
+									<div class="form__row ">
+										<label for="phone" class="form__label title title_h3">Телефон</label>
+										<div class="form__input">
+											<input type="text" id="phone" placeholder="+7 (999) 999-99-99" class="input js-tel">
+										</div>
+
+									</div>
+									<div class="form__row ">
+										<div class="checkbox">
+											<input id="c_" checked data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+											<label for="c_" class="checkbox__label">
+												<span class="checkbox__text color-txt">Я согласен(на) с <a href="">Политикой конфиденциальности</a> и&nbsp;даю согласие на&nbsp;обработку персональных данных</span>
+											</label>
+										</div>
+									</div>
+									<div class="form__row ">
+										<button class="form__button button button_icon _icon-arrow" data-popup="#call" type="submit">Заказать
+											обратный
+											звонок
+										</button>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="js/app.min.js"></script>
+</body>
+
+</html>

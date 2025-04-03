@@ -5,7 +5,7 @@
 	<title>Инвестиции в складскую недвижимость</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
-	<link rel="stylesheet" href="css/style.min.css">
+	<link rel="stylesheet" href="css/style.min.css?_v=20250403090828">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -150,7 +150,7 @@
 								осуществляются раз в&nbsp;полгода или год, что обеспечивает стабильный денежный поток.
 							</div>
 							<button class="info-hero__btn button button_icon _icon-arrow" data-popup="#call" type="button">
-								Оставить заявку
+								Персональная консультация
 							</button>
 						</div>
 					</div>
@@ -184,11 +184,11 @@
 									Сумма инвестиций, ₽
 								</div>
 								<div class="calculation__input">
-									<input class="input" type="text" id="slider-value" readonly>
-									<div id="range"></div>
+									<input class="input slider-value" type="text" readonly>
+									<div class="range"></div>
 									<div class="calculation__values">
-										<small id="min-value"></small>
-										<small id="max-value"></small>
+										<small class="min-value"></small>
+										<small class="max-value"></small>
 									</div>
 								</div>
 							</div>
@@ -196,7 +196,7 @@
 								<div class="calculation__title title title_h3">
 									Срок вложений, мес
 								</div>
-								<select name="form[]" data-class-modif="form">
+								<select name="form[]" data-class-modif="">
 									<option value="12">12</option>
 									<option value="24" selected>24</option>
 									<option value="36">36</option>
@@ -508,11 +508,100 @@
 		</footer>
 
 	</div>
-	<button class="widget" type="button" data-goto-header data-goto=".calc" da>
+	<button class="widget" type="button" data-popup="#calc">
 		<svg>
 			<use xlink:href="img/icons/icons.svg#calc"></use>
 		</svg>
 	</button>
+
+	<div id="calc" aria-hidden="true" class="popup popup_calc">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<img src="img/popup-blur.svg" alt="Image" class="popup__blur">
+				<button data-close type="button" class="popup__close">
+					<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M15 16.75L8.875 22.875C8.64583 23.1042 8.35417 23.2188 8 23.2188C7.64583 23.2188 7.35417 23.1042 7.125 22.875C6.89583 22.6458 6.78125 22.3542 6.78125 22C6.78125 21.6458 6.89583 21.3542 7.125 21.125L13.25 15L7.125 8.875C6.89583 8.64583 6.78125 8.35417 6.78125 8C6.78125 7.64583 6.89583 7.35417 7.125 7.125C7.35417 6.89583 7.64583 6.78125 8 6.78125C8.35417 6.78125 8.64583 6.89583 8.875 7.125L15 13.25L21.125 7.125C21.3542 6.89583 21.6458 6.78125 22 6.78125C22.3542 6.78125 22.6458 6.89583 22.875 7.125C23.1042 7.35417 23.2188 7.64583 23.2188 8C23.2188 8.35417 23.1042 8.64583 22.875 8.875L16.75 15L22.875 21.125C23.1042 21.3542 23.2188 21.6458 23.2188 22C23.2188 22.3542 23.1042 22.6458 22.875 22.875C22.6458 23.1042 22.3542 23.2188 22 23.2188C21.6458 23.2188 21.3542 23.1042 21.125 22.875L15 16.75Z" fill="#F5F5F5" />
+					</svg>
+				</button>
+				<div class="popup__text">
+					<section class="calc">
+						<div class="calc__container">
+							<div class="calc__row">
+								<div class="calc__col">
+									<h2 class="calc__title title title_h2">Оцените потенциал
+										<i>роста вашего капитала!</i>
+									</h2>
+									<div class="calc__text title title_h4">Зарабатывайте до <span>45%</span> в&nbsp;год</div>
+								</div>
+								<div class="calc__col">
+									<div class="text-xl">Предлагаем вам уникальную возможность увеличить свой капитал. С&nbsp;нами
+										дивиденды будут поступать дважды в&nbsp;год, что позволит вам максимально эффективно
+										управлять
+										своими финансами.
+									</div>
+								</div>
+							</div>
+							<div class="calc__wrapper calculation">
+								<div class="calculation__row">
+									<div class="calculation__col ">
+										<div class="calculation__title title title_h3">
+											Сумма инвестиций, ₽
+										</div>
+										<div class="calculation__input">
+											<input class="input slider-value" type="text" readonly>
+											<div class="range"></div>
+											<div class="calculation__values">
+												<small class="min-value"></small>
+												<small class="max-value"></small>
+											</div>
+										</div>
+									</div>
+									<div class="calculation__col ">
+										<div class="calculation__title title title_h3">
+											Срок вложений, мес
+										</div>
+										<select name="form[]" data-class-modif="">
+											<option value="12">12</option>
+											<option value="24" selected>24</option>
+											<option value="36">36</option>
+											<option value="48">48</option>
+											<option value="60">60</option>
+										</select>
+									</div>
+								</div>
+								<div class="calculation__row">
+									<div class="calculation__result result-calculation">
+										<div class="result-calculation__col ">
+											<div class="result-calculation__title title title_h3">Мой ежегодный доход,&nbsp;₽</div>
+											<div class="result-calculation__text js-result-every-year">18 583</div>
+										</div>
+										<div class="result-calculation__col ">
+											<div class="result-calculation__title title title_h3">Мои дивиденды,&nbsp;₽</div>
+											<div class="result-calculation__text js-result-dividends">8 583</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="calc__row">
+								<div class="calc__col ">
+									<button class="calc__btn button button_icon _icon-arrow" type="button" data-popup="#call">Заказать обратный
+										звонок
+									</button>
+								</div>
+								<div class="calc__col ">
+									<div class="text-main color-txt">
+										Свяжитесь с&nbsp;нами, чтобы обсудить выгодные инвестиционные стратегии и&nbsp;получить
+										квалифицированную консультацию от&nbsp;экспертов Ziyard. Мы&nbsp;готовы помочь вам достичь
+										финансового успеха!
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+		</div>
+	</div>
 
 	<button class="btn-up" type="button" data-goto=".wrapper">
 		<svg>
@@ -574,7 +663,7 @@
 		</div>
 	</div>
 
-	<script src="js/app.min.js"></script>
+	<script src="js/app.min.js?_v=20250403090828"></script>
 </body>
 
 </html>

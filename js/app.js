@@ -7044,50 +7044,52 @@
             return api;
         }
         function rangeInit() {
-            const priceSlider = document.querySelector("#range");
-            const input = document.getElementById("slider-value");
-            const minValue = document.getElementById("min-value");
-            const maxValue = document.getElementById("max-value");
-            const wrapperEveryYear = document.querySelector(".js-result-every-year");
-            const wrapperTotalDividends = document.querySelector(".js-result-dividends");
-            const selectElement = document.querySelector(".select select");
-            const customOptions = document.querySelectorAll(".select__option");
-            if (priceSlider) {
-                function updateTotalDividends(resultDividends) {
-                    let totalEveryYear = resultDividends * .4;
-                    let totalDividends = totalEveryYear * selectedValue / 12;
-                    wrapperEveryYear.innerHTML = format.to(totalEveryYear);
-                    wrapperTotalDividends.innerHTML = format.to(totalDividends);
-                }
-                const format = wNumb({
-                    decimals: 0,
-                    thousand: " "
-                });
-                let selectedValue = selectElement.value;
-                initialize(priceSlider, {
-                    start: [ 2e5 ],
-                    connect: [ true, false ],
-                    range: {
-                        min: [ 1e5 ],
-                        max: [ 5e8 ]
-                    },
-                    format
-                });
-                customOptions.forEach((option => {
-                    option.addEventListener("click", (function() {
-                        selectedValue = option.getAttribute("data-value");
-                        updateTotalDividends(+input.value.replace(/\s/g, ""));
+            document.querySelectorAll(".calculation").forEach((calculator => {
+                const priceSlider = calculator.querySelector(".range");
+                const input = calculator.querySelector(".slider-value");
+                const minValue = calculator.querySelector(".min-value");
+                const maxValue = calculator.querySelector(".max-value");
+                const wrapperEveryYear = calculator.querySelector(".js-result-every-year");
+                const wrapperTotalDividends = calculator.querySelector(".js-result-dividends");
+                const selectElement = calculator.querySelector(".select select");
+                const customOptions = calculator.querySelectorAll(".select__option");
+                if (priceSlider) {
+                    function updateTotalDividends(resultDividends, selectedValue) {
+                        let totalEveryYear = resultDividends * .4;
+                        let totalDividends = totalEveryYear * selectedValue / 12;
+                        wrapperEveryYear.innerHTML = format.to(totalEveryYear);
+                        wrapperTotalDividends.innerHTML = format.to(totalDividends);
+                    }
+                    const format = wNumb({
+                        decimals: 0,
+                        thousand: " "
+                    });
+                    let selectedValue = selectElement.value;
+                    initialize(priceSlider, {
+                        start: [ 2e5 ],
+                        connect: [ true, false ],
+                        range: {
+                            min: [ 1e5 ],
+                            max: [ 5e8 ]
+                        },
+                        format
+                    });
+                    customOptions.forEach((option => {
+                        option.addEventListener("click", (function() {
+                            selectedValue = option.getAttribute("data-value");
+                            updateTotalDividends(+input.value.replace(/\s/g, ""), selectedValue);
+                        }));
                     }));
-                }));
-                const range = priceSlider.noUiSlider.options.range;
-                minValue.textContent = format.to(+range.min);
-                maxValue.textContent = format.to(+range.max);
-                priceSlider.noUiSlider.on("update", (function(values) {
-                    let resultDividends = +values[0].replace(/\s/g, "");
-                    input.value = values[0];
-                    updateTotalDividends(resultDividends);
-                }));
-            }
+                    const range = priceSlider.noUiSlider.options.range;
+                    minValue.textContent = format.to(+range.min);
+                    maxValue.textContent = format.to(+range.max);
+                    priceSlider.noUiSlider.on("update", (function(values) {
+                        let resultDividends = +values[0].replace(/\s/g, "");
+                        input.value = values[0];
+                        updateTotalDividends(resultDividends, selectedValue);
+                    }));
+                }
+            }));
         }
         rangeInit();
         function ssr_window_esm_isObject(obj) {
